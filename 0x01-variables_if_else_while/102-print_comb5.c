@@ -1,45 +1,47 @@
-#include <stdio.h>
+i#include <stdio.h>
 
 /**
- * main - Entry point
+ * main - Entry Point
  *
  * Return: Always 0 (Success)
  */
-
 int main(void)
 {
-	int i = 48, j, k, l;
+	int i, e, g, h, op1, op2;
 
-	while (i < 58)
+	i = e = g = h = 48;
+	while (h < 58)
 	{
-		j = 48;
-		while (j < 58)
+		g = 48;
+		while (g < 58)
 		{
-			k = i;
-			while (k < 58)
+			e = 48;
+			while (e < 58)
 			{
-				l = j + 1;
-				while (l < 58)
+				i = 48;
+				while (i < 58)
 				{
-					putchar(i);
-					putchar(j);
-					putchar(32);
-					putchar(k);
-					putchar(l);
-					if (i == 57 && j == 56 && k == 57 && l == 57)
+					op1 = (h * 10) + g;
+					op2 = (e * 10) + i;
+					if (op1 < op2)
 					{
-						l++;
-						continue;
+						putchar(h);
+						putchar(g);
+						putchar(32);
+						putchar(e);
+						putchar(i);
+						if (h == 57 && g == 56 && e == 57 && i == 57)
+							break;
+						putchar(44);
+						putchar(32);
 					}
-					putchar(44);
-					putchar(32);
-					l++;
+					i++;
 				}
-				k++;
+				e++;
 			}
-			j++;
+			g++;
 		}
-		i++;
+		h++;
 	}
 	putchar('\n');
 
