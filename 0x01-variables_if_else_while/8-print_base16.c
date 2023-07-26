@@ -1,22 +1,27 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers between 0 to 9 and letters between a to f.
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int i;
+	int nums_base_16 = 48;
+	char rest_nums = 'a';
 
-	for (i = 48; i < 58; i++)
+	while (nums_base_16 < 58)
 	{
-		putchar(i);
+		putchar(nums_base_16);
+		nums_base_16++;
 	}
-	for (i = 97; i < 103; i++)
+	while (rest_nums <= 'f')
 	{
-		putchar(i);
+		putchar(rest_nums);
+		rest_nums++;
 	}
 	putchar('\n');
+
 	return (0);
 }

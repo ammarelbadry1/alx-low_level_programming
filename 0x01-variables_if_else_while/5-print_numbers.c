@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - Prints numbers from 0 to 9.
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int i;
+	int i = 0;
 
-	for (i = 0; i < 10; i++)
+	while (i <= 9)
 	{
 		printf("%d", i);
+		i++;
 	}
 	putchar('\n');
+
 	return (0);
 }

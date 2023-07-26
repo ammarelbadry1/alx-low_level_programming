@@ -1,18 +1,21 @@
 #include <stdio.h>
 
 /**
- * main - Prints reversed alphabet.
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int i;
+	char rev_alphabet = 'z';
 
-	for (i = 122; i > 96; i--)
+	while (rev_alphabet >= 'a')
 	{
-		putchar(i);
+		putchar(rev_alphabet);
+		rev_alphabet--;
 	}
 	putchar('\n');
+
 	return (0);
 }
