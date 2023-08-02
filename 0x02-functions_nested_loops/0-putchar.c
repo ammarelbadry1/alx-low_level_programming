@@ -1,20 +1,22 @@
 #include "main.h"
 
 /**
- * main - Prints _putchar as a message.
+ * main - Entry point
  *
  * Return: Always 0 (Success)
  */
+
 int main(void)
 {
-	int str[] = {95, 112, 117, 116, 99, 104, 97, 114};
-	int count, sz;
+	int my_word[] = {95, 112, 117, 116, 99, 104, 97, 114};
+	int i = 0, size;
 
-	sz = sizeof(str) / sizeof(int);
-	for (count = 0; count < sz; count++)
+	size = sizeof(my_word) / sizeof(int);
+	while (i < size)
 	{
-		_putchar(str[count]);
+		_putchar(my_word[i]);
+		i++;
 	}
-	_putchar('\n');
+	_putchar(10);
 	return (0);
 }
