@@ -29,6 +29,8 @@ int main(void)
 		{
 			printf("%d", i);
 		}
+		if (i == 100)
+			break;
 		putchar(32);
 		i++;
 	}
