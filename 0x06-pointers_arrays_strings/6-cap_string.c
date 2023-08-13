@@ -13,6 +13,8 @@ char *cap_string(char *str)
 	int ascii_codes[] = {9, 10, 32, 33, 34, 40, 41, 44, 46, 59, 63, 123, 125};
 	int i, j;
 
+	if (str[0] >= 97 && str[0] <= 122)
+		str[0] -= 32;
 	i = 0;
 	while (str[i] != 0)
 	{
