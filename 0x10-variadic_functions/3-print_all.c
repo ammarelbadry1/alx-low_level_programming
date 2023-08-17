@@ -10,15 +10,15 @@
 void print_all(const char * const format, ...)
 {
 	va_list ap;
-	unsigned int i = 0, j;
+	unsigned int i = 0, j, print_sep = 0;
 	char *stringtmp;
-	const char *possible_arguments = "cifs";
+	const char *possible_arguments = "csif";
 
 	va_start(ap, format);
 	while (format && format[i])
 	{
 		j = 0;
-		while (possible_arguments[j] && i != 0)
+		while (possible_arguments[j] && print_sep)
 		{
 			if (format[i] == possible_arguments[j])
 			{
@@ -29,16 +29,16 @@ void print_all(const char * const format, ...)
 		switch (format[i])
 		{
 		case 'c':
-			printf("%c", va_arg(ap, int));
+			printf("%c", va_arg(ap, int)), print_sep = 1;
 			break;
 		case 'i':
-			printf("%d", va_arg(ap, int));
+			printf("%d", va_arg(ap, int)), print_sep = 1;
 			break;
 		case 'f':
-			printf("%f", va_arg(ap, double));
+			printf("%f", va_arg(ap, double)), print_sep = 1;
 			break;
 		case 's':
-			stringtmp = va_arg(ap, char *);
+			stringtmp = va_arg(ap, char *), print_sep = 1;
 			if (!stringtmp)
 			{
 				printf("(nil)");
