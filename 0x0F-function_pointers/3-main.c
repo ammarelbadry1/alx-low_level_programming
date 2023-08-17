@@ -19,7 +19,11 @@ int main(int argc, char **argv)
 		exit(98);
 	}
 
-
+	if (argv[2][1])
+	{
+		printf("Error\n");
+		exit(99);
+	}
 
 	function_ptr = get_op_func(argv[2]);
 	if (function_ptr == NULL)
