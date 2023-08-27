@@ -1,7 +1,7 @@
 template.c
 template_script
-run-c_script
-git-push_script
+run-c_script.bash
+git-push_script.bash
 a.out
 _putchar.c
 test.c
